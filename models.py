@@ -11,7 +11,7 @@ class User(db.Model):
 	email = db.Column(db.String(120),unique = True)
 	pwdhash = db.Column(db.String(54))
 
-	def __init__(self,fistname,lastname,email,password):
+	def __init__(self,firstname,lastname,email,password):
 		self.firstname = firstname.title()
 		self.lastname = lastname.title()
 		self.email = email.lower()
